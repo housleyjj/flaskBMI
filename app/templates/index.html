@@ -7,7 +7,7 @@
 <body>
     <h1>Hello and Welcome to my BMI calculator!</h1>
     <div class="main">
-        <h3>Please enter the following information:</h3><br><br>
+        <h2>Please enter the following information:</h2><br><br>
         <form class="pure-form" method="POST" action="{{ url_for('results') }}">
             Name:
             <input type="text" name="username"><br><br>
@@ -19,6 +19,6 @@
         </form>
     </div>
     {% if error %}
-      <h3 class="main"> {{ error }}</h2>
+      <h2 class="main"> {{ error }}</h2>
     {% endif %}
 </body>
