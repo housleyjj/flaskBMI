@@ -13,7 +13,9 @@ Another goal of mine was to see how I could implement Docker.  I was able to run
 ### Docker intstructions
 Once you have pulled the applicaion, in your command prompt run:
    
-   1. docker build -t bmi_flask:latest   
+   1. docker build -t bmi_flask:latest .  
    2. docker run -d --rm --name bmi-app -p 5000:5000 bmi_flask:latest
+   3. If you want to edit this application and would like realtime updates, add a bind mount to your docker run command:
+     docker run -d --rm -v $(pwd)/app:/app:ro --name bmi_app bmi_flask:latest
 
-Then using your browser of choice, goto localhost:5000
+Then using your browser of choice, go to localhost:5000
