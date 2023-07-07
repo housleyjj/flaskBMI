@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>BMI calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Hello and Welcome to my BMI calculator!</h1>
+    <div class="main">
+        <h3>Please enter the following information:</h3><br><br>
+        <form class="pure-form" method="POST" action="{{ url_for('results') }}">
+            Name:
+            <input type="text" name="username"><br><br>
+            Weight:
+            <input type="text" name="userweight"><br><br>
+            Height:
+            <input type="text" name="userheight"><br><br>
+            <button type="submit" class="pure-button pure-button-primary" value="Submit">Submit</button>
+        </form>
+    </div>
+    {% if error %}
+      <h2 class="main"> {{ error }}</h2>
+    {% endif %}
+</body>

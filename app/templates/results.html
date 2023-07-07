@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>Your Results</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 class="main"> Hello {{ name }}, here are your results!</h1>
+    <div class="main">
+        <form class="pure-form" method="GET", action="/">
+            <p>Your entered height: {{ height }}</p><br>
+            <p>Your entered weight: {{ weight }}</p><br>
+            <p>You calculated BMI: {{ result }}</p><br>
+            <br><br>
+            <button type="submit", class="pure-button pure-button-primary" value="Submit">Reset</button>
+        </form>
+    </div>
+</body>
+
